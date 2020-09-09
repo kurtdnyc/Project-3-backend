@@ -134,7 +134,6 @@ public class ClientServiceImpl implements ClientService {
         
         String message1stHalf = SendHTMLEmail.parseFile("src/main/resources/mail1stHalf.html");
         String message2ndHalf = SendHTMLEmail.parseFile("src/main/resources/mail2ndHalf.html");
-        // String apiCall = "http://bug-bounty-system.s3-website.us-east-2.amazonaws.com/resetpassword?username="+rp.getUsername()+"&email="+rp.getemail()+"&key="+rp.getApiKey();
         String apiCall = "http://localhost:4200/resetpassword?username="+rp.getUsername()+"&email="+rp.getemail()+"&key="+rp.getApiKey();
         String message = message1stHalf + apiCall + message2ndHalf;
         		

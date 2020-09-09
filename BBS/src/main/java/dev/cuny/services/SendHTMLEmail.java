@@ -32,6 +32,7 @@ public class SendHTMLEmail {
  
         // creates a new session with an authenticator
         Authenticator auth = new Authenticator() {
+        	@Override
             public PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(userName, password);
             }

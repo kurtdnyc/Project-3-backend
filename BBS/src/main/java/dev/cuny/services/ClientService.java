@@ -36,6 +36,6 @@ public interface ClientService {
 	Boolean sendEmail(String subject, ResetPassword rp) throws IOException;
 
 	ResetPassword savePasswordRequest(EmailDto emailDto);
-
+	
 	Client verifyResetPasswordClient(String username, String email, String key);
 }

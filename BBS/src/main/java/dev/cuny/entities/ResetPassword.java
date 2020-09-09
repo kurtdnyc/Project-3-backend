@@ -1,6 +1,5 @@
 package dev.cuny.entities;
 
-import java.nio.charset.Charset;
 import java.util.Random;
 
 import javax.persistence.Column;
@@ -102,7 +101,8 @@ public class ResetPassword {
 
 
 	private String generateKey() {
-		int leftLimit, rightLimit;
+		int leftLimit;
+		int rightLimit;
 		int leftLimitLower = 97; // letter 'a'
 	    int rightLimitLower = 122; // letter 'z'
 	    
@@ -135,7 +135,6 @@ public class ResetPassword {
 	          (random.nextFloat() * (rightLimit - leftLimit + 1));
 	        buffer.append((char) randomLimitedInt);
 	    }
-	    String generatedString = buffer.toString();
-	    return generatedString;
+	    return buffer.toString();
 	}
 }

@@ -244,4 +244,5 @@ class ClientServiceImplTests {
 		ResetPassword rp = rpr.findByUsername(emailDto.getUsername());
 		Assertions.assertNotEquals(null, cs.verifyResetPasswordClient(rp.getUsername(), rp.getemail(), rp.getApiKey()));
 	}
+	
 }
