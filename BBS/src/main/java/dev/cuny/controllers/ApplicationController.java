@@ -43,17 +43,11 @@ public class ApplicationController {
 	}
 
 	@GetMapping(value = "/applications")
-	public <T> T getApplication(
-			@RequestParam(required = false) String title,
-			@RequestParam(required = false) String resolvedtime) {
-		
+	public <T> T getApplication(@RequestParam(required = false) String title) {
 		if(title == null) {
 			title="";
 		}
-		if (resolvedtime == null) {
-			resolvedtime = "";
-		}
-		return getApplicationImpl("0", title, resolvedtime);
+		return getApplicationImpl("0", title, "");
 	}
 	
 	@GetMapping(value = "/applications/{id}")
