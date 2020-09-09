@@ -132,8 +132,8 @@ public class ClientServiceImpl implements ClientService {
         String mailFrom = "2007wvu@gmail.com";
         String password = "1Revature!";
         
-        String message1stHalf = SendHTMLEmail.parseFile("src/main/resources/mail1stHalf.html");
-        String message2ndHalf = SendHTMLEmail.parseFile("src/main/resources/mail2ndHalf.html");
+        String message1stHalf = SendHTMLEmail.parseFile("src/main/resources/mail1stHalf.txt");
+        String message2ndHalf = SendHTMLEmail.parseFile("src/main/resources/mail2ndHalf.txt");
         String apiCall = "http://localhost:4200/resetpassword?username="+rp.getUsername()+"&email="+rp.getemail()+"&key="+rp.getApiKey();
         String message = message1stHalf + apiCall + message2ndHalf;
         		
